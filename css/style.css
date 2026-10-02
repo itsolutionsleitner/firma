@@ -4939,3 +4939,412 @@ a.contact-method:hover small {
     transition-duration: 0.01ms;
   }
 }
+
+/* === 16. HELLER, FREUNDLICHER FARBPASS === */
+/* Helle Grundflaechen tragen den Auftritt. Dunkle Farben bleiben als gezielte
+   Kontraste fuer Text, Bilder und einzelne Interaktionen erhalten. */
+:root {
+  --paper: #fbf9f3;
+  --paper-dark: #edf1ea;
+  --cloud: #fbf9f3;
+  --white: #ffffff;
+  --aqua-light: #dceee9;
+  --sage-light: #e8eee5;
+  --lime-light: #f1f7d2;
+  --coral-light: #f7ddd9;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--paper);
+  overflow-x: hidden;
+}
+
+/* Navigation auf allen Seiten */
+.site-header,
+.site-header--dark,
+.site-header--dark.is-scrolled {
+  background: rgba(251, 249, 243, 0.94);
+  border-color: rgba(19, 43, 49, 0.1);
+  box-shadow: 0 8px 26px rgba(19, 43, 49, 0.06);
+  color: var(--ink-deep);
+}
+.site-header--dark .brand {
+  background-image: url('../images/linaro-logo.png');
+}
+.site-header--dark .nav-links a,
+.site-header--dark .nav-links button {
+  color: var(--ink-deep);
+}
+.site-header--dark .nav-links a::after {
+  background: var(--coral);
+}
+.site-header--dark .submenu {
+  background: var(--white);
+  border-color: rgba(19, 43, 49, 0.12);
+}
+.site-header--dark .submenu a:hover {
+  background: var(--lime-light);
+  color: var(--ink-deep);
+}
+.site-header--dark .menu-toggle span {
+  background: var(--ink-deep);
+}
+
+/* Startseiten-Hero */
+.hero-premium {
+  background: linear-gradient(135deg, #fbf9f3 0%, #eef3ea 58%, #dceee9 100%);
+  color: var(--ink-deep);
+}
+.hero-premium::before {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(251, 249, 243, 0.99) 0%,
+      rgba(251, 249, 243, 0.94) 38%,
+      rgba(251, 249, 243, 0.58) 66%,
+      rgba(220, 238, 233, 0.42) 100%
+    ),
+    url('../images/hero-creative-background.png') center / cover no-repeat;
+  opacity: 0.78;
+}
+.hero-premium__grain {
+  mix-blend-mode: multiply;
+  opacity: 0.035;
+}
+.hero-kicker {
+  color: var(--ink-soft);
+}
+.hero-premium h1 .outline-text {
+  -webkit-text-stroke: 1px var(--ink-deep);
+  color: transparent;
+}
+.hero-premium h1 .accent-text {
+  color: var(--coral);
+}
+.hero-premium__intro p {
+  color: var(--ink-soft);
+}
+.hero-secondary-action {
+  border-color: rgba(19, 43, 49, 0.55);
+  color: var(--ink-deep);
+}
+.hero-secondary-action:hover {
+  color: var(--coral);
+}
+.hero-premium__art::before {
+  border-color: rgba(19, 43, 49, 0.24);
+}
+.hero-frame {
+  box-shadow: 0 24px 55px rgba(19, 43, 49, 0.16);
+}
+
+/* Helle redaktionelle Flaechen auf der Startseite */
+.premium-intro,
+.image-narrative,
+.work-stage,
+.faq-premium {
+  background: var(--paper);
+}
+.statement-stage,
+.process-premium {
+  background: var(--sage-light);
+  color: var(--ink-deep);
+}
+.statement-stage::before {
+  background: radial-gradient(circle, rgba(211, 238, 85, 0.5) 0, transparent 69%);
+}
+.statement-stage__facts > p,
+.process-premium__intro,
+.process-premium__rail p,
+.process-premium__personal > div > p:last-child {
+  color: var(--ink-soft);
+}
+.statement-stage__facts li,
+.process-premium__rail li,
+.process-premium__personal {
+  border-color: rgba(19, 43, 49, 0.16);
+}
+.section-label--light,
+.process-premium .section-label--light {
+  color: var(--ink-soft);
+}
+.process-premium__personal {
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 18px 42px rgba(19, 43, 49, 0.08);
+}
+.process-premium__personal h3 {
+  color: var(--coral);
+}
+.process-premium__personal figcaption {
+  color: var(--white);
+}
+.process-premium__rail li::before {
+  background: var(--coral);
+}
+.services-cinema,
+.client-stage,
+.offer-showcase,
+.project-gallery {
+  background: var(--aqua-light);
+}
+.services-cinema__grid {
+  gap: 1.35rem;
+}
+.cinema-card {
+  box-shadow: 0 14px 34px rgba(19, 43, 49, 0.1);
+}
+
+/* Unterseiten-Hero: Bild bleibt sichtbar, die Gesamtwirkung wird hell. */
+.page-hero {
+  background: linear-gradient(135deg, #fbf9f3 0%, #e8eee5 100%);
+  color: var(--ink-deep);
+}
+.page-hero::before,
+.page--webdesign .page-hero::before,
+.page--betreuung .page-hero::before,
+.page--hosting .page-hero::before,
+.page--leistungen .page-hero::before,
+.page--contact .page-hero::before,
+.page--about .page-hero::before,
+.page--references .page-hero::before {
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(251, 249, 243, 0.99) 0%,
+      rgba(251, 249, 243, 0.95) 43%,
+      rgba(251, 249, 243, 0.67) 68%,
+      rgba(232, 238, 229, 0.35) 100%
+    ),
+    var(--page-hero-image, none);
+  opacity: 1;
+}
+.page--webdesign .page-hero::before {
+  --page-hero-image: url('../images/webdesign-devices.png');
+}
+.page--betreuung .page-hero::before {
+  --page-hero-image: url('../images/collaboration-studio.png');
+}
+.page--hosting .page-hero::before {
+  --page-hero-image: url('../images/hosting-detail.png');
+}
+.page--leistungen .page-hero::before,
+.page--contact .page-hero::before {
+  --page-hero-image: url('../images/creative-workbench.png');
+}
+.page--about .page-hero::before {
+  --page-hero-image: url('../images/studio-workspace.png');
+}
+.page--references .page-hero::before {
+  --page-hero-image: url('../images/webdesign-devices.png');
+}
+.page-hero .lead,
+.page-hero .eyebrow {
+  color: var(--ink-soft);
+}
+.page-hero h1 .lime {
+  color: var(--coral);
+}
+.page-hero::after {
+  background: var(--lime);
+  border: 0;
+  opacity: 0.42;
+}
+.page--about .page-hero::after {
+  background: var(--coral-light);
+  opacity: 0.72;
+}
+
+/* Ehemals dunkle Inhaltsbereiche */
+.section--ink,
+.care-included {
+  background: var(--lime-light);
+  color: var(--ink-deep);
+}
+.section--ink .section__head p,
+.section--ink .muted,
+.section--ink .process-step p {
+  color: var(--ink-soft);
+}
+.section--ink .process-step,
+.care-included__list li {
+  border-color: rgba(19, 43, 49, 0.18);
+}
+.feature-list,
+.feature-list li {
+  border-color: rgba(19, 43, 49, 0.18);
+}
+.feature-list p {
+  color: var(--ink-soft);
+}
+.photo-addon {
+  background: var(--coral-light);
+  color: var(--ink-deep);
+}
+.photo-addon__copy > p:not(.eyebrow):not(.image-note),
+.photo-addon .image-note {
+  color: var(--ink-soft);
+}
+.photo-addon .check-list li {
+  border-color: rgba(19, 43, 49, 0.16);
+}
+.photo-addon .text-arrow {
+  color: var(--ink-deep);
+}
+
+/* Kontakt, CTAs und Abschluss */
+.contact-section {
+  background: linear-gradient(135deg, #fbf9f3 0%, #dceee9 100%);
+}
+.contact-form {
+  background: var(--white);
+  box-shadow: 18px 18px 0 rgba(190, 52, 66, 0.12);
+  color: var(--ink-deep);
+}
+.contact-form::before {
+  background: radial-gradient(circle, rgba(211, 238, 85, 0.42), transparent 68%);
+}
+.contact-form__head {
+  border-color: rgba(19, 43, 49, 0.14);
+}
+.contact-form__head p,
+.contact-form .field label,
+.contact-form .checkbox,
+.contact-form__footer .image-note {
+  color: var(--ink-soft);
+}
+.contact-form .field input,
+.contact-form .field textarea,
+.contact-form .field select {
+  border-color: rgba(19, 43, 49, 0.35);
+  color: var(--ink-deep);
+}
+.contact-form .checkbox .text-link {
+  color: var(--coral);
+}
+.cta-band,
+.page--references main > .section--ink:last-child {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(241, 247, 210, 0.98),
+      rgba(220, 238, 233, 0.94) 58%,
+      rgba(247, 221, 217, 0.72)
+    ),
+    url('../images/creative-workbench.png') center 54% / cover no-repeat;
+  color: var(--ink-deep);
+}
+.cta-band::before {
+  display: none;
+}
+.cta-band::after {
+  border-color: rgba(19, 43, 49, 0.2);
+}
+.cta-band .button--primary {
+  background: var(--ink-deep);
+  border-color: var(--ink-deep);
+  color: var(--white);
+}
+.cta-band .button--primary:hover {
+  background: var(--coral);
+  border-color: var(--coral);
+}
+.closing-stage {
+  background: var(--aqua-light);
+  color: var(--ink-deep);
+}
+.closing-stage::after {
+  background: linear-gradient(
+    90deg,
+    rgba(251, 249, 243, 0.98) 0%,
+    rgba(251, 249, 243, 0.9) 48%,
+    rgba(220, 238, 233, 0.35) 100%
+  );
+}
+.closing-stage h2 span {
+  color: var(--coral);
+}
+
+/* Betreuungspakete und Footer */
+.care-card--featured {
+  background: var(--lime-light);
+  border-color: rgba(19, 43, 49, 0.18);
+  color: var(--ink-deep);
+}
+.care-card--featured .care-card__top,
+.care-card--featured li {
+  border-color: rgba(19, 43, 49, 0.16);
+}
+.care-card--featured > p {
+  color: var(--ink-soft);
+}
+.care-card--featured h3,
+.care-card--featured .text-arrow {
+  color: var(--coral);
+}
+.site-footer,
+.site-footer--premium {
+  background: #dfeae4;
+  color: var(--ink-deep);
+}
+.footer-brand,
+.site-footer--premium .footer-brand {
+  background-image: url('../images/linaro-logo.png');
+}
+.footer-title,
+.footer-premium__top > div:nth-child(2) p {
+  color: var(--coral);
+}
+.footer-premium__top > div:nth-child(2),
+.site-footer .muted,
+.footer-bottom {
+  color: var(--ink-soft);
+}
+.footer-bottom {
+  border-color: rgba(19, 43, 49, 0.18);
+}
+.footer-links a:hover,
+.footer-premium__top a:hover {
+  color: var(--coral);
+}
+
+@media (max-width: 850px) {
+  .site-header--dark .nav-links {
+    background: var(--paper);
+  }
+  .site-header--dark .nav-links a,
+  .site-header--dark .nav-links button {
+    color: var(--ink-deep);
+  }
+  .site-header--dark .submenu {
+    background: transparent;
+  }
+  .hero-premium::before {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(251, 249, 243, 0.99) 0%,
+        rgba(251, 249, 243, 0.94) 50%,
+        rgba(220, 238, 233, 0.72) 100%
+      ),
+      url('../images/hero-creative-background.png') 62% center / cover no-repeat;
+  }
+  .page-hero::before,
+  .page--webdesign .page-hero::before,
+  .page--betreuung .page-hero::before,
+  .page--hosting .page-hero::before,
+  .page--leistungen .page-hero::before,
+  .page--contact .page-hero::before,
+  .page--about .page-hero::before,
+  .page--references .page-hero::before {
+    background-image: linear-gradient(
+      180deg,
+      rgba(251, 249, 243, 0.99) 0%,
+      rgba(251, 249, 243, 0.94) 63%,
+      rgba(232, 238, 229, 0.8) 100%
+    );
+  }
+}
