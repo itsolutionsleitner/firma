@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const pageName = window.location.pathname.split('/').filter(Boolean).pop() || 'index.html';
   const pageClassMap = {
     'webdesign.html': 'page--webdesign',
+    'seo.html': 'page--seo',
     'betreuung.html': 'page--betreuung',
     'domain-hosting.html': 'page--hosting',
     'leistungen.html': 'page--leistungen',
@@ -138,9 +139,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   document.querySelectorAll('[data-project-reveal]').forEach((card) => {
-    card.addEventListener('click', (event) => {
+    card.addEventListener('pointerup', (event) => {
+      if (event.pointerType === 'mouse') return;
       if (event.target.closest('a')) return;
       card.classList.toggle('is-active');
+    });
+    card.addEventListener('pointerleave', (event) => {
+      if (event.pointerType === 'mouse') card.classList.remove('is-active');
+    });
+    card.addEventListener('focusout', (event) => {
+      if (!card.contains(event.relatedTarget)) card.classList.remove('is-active');
     });
     card.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') card.classList.remove('is-active');

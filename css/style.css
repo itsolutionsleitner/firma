@@ -1544,7 +1544,25 @@ select:focus-visible {
 .premium-intro__grid {
   display: grid;
   gap: 4rem;
-  grid-template-columns: minmax(150px, 0.48fr) minmax(0, 1.52fr);
+  align-items: center;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+}
+.premium-intro__visual {
+  min-width: 0;
+}
+.premium-intro__visual figure {
+  margin: 1.8rem 0 0;
+}
+.premium-intro__visual img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  width: 100%;
+  box-shadow: 12px 12px 0 var(--aqua);
+}
+.premium-intro__visual figcaption {
+  color: var(--ink-soft);
+  font-size: 0.76rem;
+  margin-top: 1.5rem;
 }
 .premium-intro h2 {
   font-size: clamp(2.9rem, 6vw, 6.1rem);
@@ -1623,7 +1641,7 @@ select:focus-visible {
   padding-top: 0.35rem;
 }
 .statement-stage__ribbon {
-  background: var(--coral);
+  background: var(--aqua);
   color: var(--ink-deep);
   margin-top: 1rem;
   overflow: hidden;
@@ -2470,27 +2488,47 @@ select:focus-visible {
   background: transparent;
   display: flex;
   justify-content: center;
-  min-height: 180px;
+  min-height: 230px;
   overflow: hidden;
-  padding: clamp(1.5rem, 3vw, 2.4rem);
+  padding: 3rem clamp(1.5rem, 3vw, 2.4rem) 4.5rem;
   position: relative;
   transition:
     background-color 0.3s ease,
     opacity 0.3s ease;
+}
+.client-logo::after {
+  bottom: 1.5rem;
+  color: var(--ink-soft);
+  content: 'Projekt entdecken ↗';
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  position: absolute;
+  text-transform: uppercase;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 .client-logo + .client-logo {
   border-left: 1px solid rgba(19, 43, 49, 0.16);
 }
 .client-logo:hover,
 .client-logo:focus-visible {
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.4);
+}
+.client-logo:hover::after,
+.client-logo:focus-visible::after {
+  color: var(--coral);
+  transform: translateY(-2px);
+}
+.client-logo:focus-visible {
+  outline: 2px solid var(--ink-soft);
+  outline-offset: -4px;
 }
 .client-logo img {
-  filter: grayscale(1) brightness(0.48) contrast(1.7);
-  height: 92px;
+  filter: grayscale(1) brightness(0.75) contrast(2);
+  height: 112px;
   mix-blend-mode: multiply;
   object-fit: contain;
-  opacity: 0.8;
+  opacity: 1;
   transition:
     filter 0.3s ease,
     opacity 0.3s ease,
@@ -2498,13 +2536,13 @@ select:focus-visible {
   width: min(78%, 390px);
 }
 .client-logo--neuburger img {
+  filter: grayscale(1) contrast(1.15);
   object-fit: cover;
   object-position: center;
+  opacity: 0.58;
 }
 .client-logo:hover img,
 .client-logo:focus-visible img {
-  filter: grayscale(1) brightness(0.36) contrast(1.9);
-  opacity: 1;
   transform: scale(1.035);
 }
 
@@ -2574,7 +2612,8 @@ select:focus-visible {
 
 @media (max-width: 560px) {
   .client-logo {
-    min-height: 150px;
+    min-height: 180px;
+    padding: 2rem 1.5rem 4rem;
   }
   .client-logo img {
     height: 76px;
@@ -4867,22 +4906,22 @@ a.contact-method:hover small {
   transform: translateX(0.3rem);
 }
 .project-reveal:hover > img,
-.project-reveal:focus > img,
-.project-reveal:focus-within > img,
+.project-reveal:focus-visible > img,
+.project-reveal:has(:focus-visible) > img,
 .project-reveal.is-active > img {
   filter: saturate(0.55);
   opacity: 0.22;
   transform: scale(1.045);
 }
 .project-reveal:hover .project-reveal__veil,
-.project-reveal:focus .project-reveal__veil,
-.project-reveal:focus-within .project-reveal__veil,
+.project-reveal:focus-visible .project-reveal__veil,
+.project-reveal:has(:focus-visible) .project-reveal__veil,
 .project-reveal.is-active .project-reveal__veil {
   opacity: 1;
 }
 .project-reveal:hover .project-reveal__info,
-.project-reveal:focus .project-reveal__info,
-.project-reveal:focus-within .project-reveal__info,
+.project-reveal:focus-visible .project-reveal__info,
+.project-reveal:has(:focus-visible) .project-reveal__info,
 .project-reveal.is-active .project-reveal__info {
   opacity: 1;
   transform: translateY(0);
@@ -5086,13 +5125,50 @@ body {
   background: var(--coral);
 }
 .services-cinema,
-.client-stage,
 .offer-showcase,
 .project-gallery {
   background: var(--aqua-light);
 }
+.client-stage {
+  background: var(--paper);
+}
 .services-cinema__grid {
   gap: 1.35rem;
+}
+.services-cinema__grid--four {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.seo-offer-grid {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.seo-story__image {
+  margin: 0;
+}
+.seo-story__image img {
+  aspect-ratio: 4 / 5;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.seo-story .grid-2 {
+  align-items: center;
+}
+.team-card__name span {
+  display: block;
+}
+.team-card__name .team-card__title {
+  font-size: 0.68em;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+.page--references main > .section--ink:last-child .button {
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 0.5rem;
 }
 .cinema-card {
   box-shadow: 0 14px 34px rgba(19, 43, 49, 0.1);
@@ -5110,7 +5186,8 @@ body {
 .page--leistungen .page-hero::before,
 .page--contact .page-hero::before,
 .page--about .page-hero::before,
-.page--references .page-hero::before {
+.page--references .page-hero::before,
+.page--seo .page-hero::before {
   background-image:
     linear-gradient(
       90deg,
@@ -5119,7 +5196,7 @@ body {
       rgba(251, 249, 243, 0.67) 68%,
       rgba(232, 238, 229, 0.35) 100%
     ),
-    var(--page-hero-image, none);
+    var(--page-hero-image, url('../images/hero-digital-studio.png'));
   opacity: 1;
 }
 .page--webdesign .page-hero::before {
@@ -5140,6 +5217,9 @@ body {
 }
 .page--references .page-hero::before {
   --page-hero-image: url('../images/webdesign-devices.png');
+}
+.page--seo .page-hero::before {
+  --page-hero-image: url('../images/seo-visibility.png');
 }
 .page-hero .lead,
 .page-hero .eyebrow {
@@ -5326,9 +5406,9 @@ body {
     background:
       linear-gradient(
         180deg,
-        rgba(251, 249, 243, 0.99) 0%,
-        rgba(251, 249, 243, 0.94) 50%,
-        rgba(220, 238, 233, 0.72) 100%
+        rgba(251, 249, 243, 0.9) 0%,
+        rgba(251, 249, 243, 0.82) 50%,
+        rgba(220, 238, 233, 0.4) 100%
       ),
       url('../images/hero-creative-background.png') 62% center / cover no-repeat;
   }
@@ -5339,12 +5419,32 @@ body {
   .page--leistungen .page-hero::before,
   .page--contact .page-hero::before,
   .page--about .page-hero::before,
-  .page--references .page-hero::before {
-    background-image: linear-gradient(
-      180deg,
-      rgba(251, 249, 243, 0.99) 0%,
-      rgba(251, 249, 243, 0.94) 63%,
-      rgba(232, 238, 229, 0.8) 100%
-    );
+  .page--references .page-hero::before,
+  .page--seo .page-hero::before {
+    background-image:
+      linear-gradient(180deg, rgba(251, 249, 243, 0.92) 0%, rgba(251, 249, 243, 0.84) 48%, rgba(232, 238, 229, 0.42) 100%),
+      var(--page-hero-image, url('../images/hero-digital-studio.png'));
+    background-position: center, center;
+    background-size: cover;
+  }
+  .premium-intro__visual {
+    margin-bottom: 2rem;
+  }
+  .premium-intro__visual img {
+    aspect-ratio: 3 / 2;
+  }
+  .services-cinema__grid--four, .seo-offer-grid {
+    grid-template-columns: 1fr;
+  }
+  .work-stage__head h2 {
+    max-width: 100%;
+    min-width: 0;
+    font-size: clamp(2rem, 8.5vw, 3.8rem);
+    line-height: 1.08;
+    overflow-wrap: anywhere;
+    hyphens: auto;
+  }
+  .work-stage__head h2 span {
+    display: block;
   }
 }

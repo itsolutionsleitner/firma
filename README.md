@@ -5,7 +5,7 @@ Statische, responsive Unternehmenswebsite für Leitwerk Digital. Die Website ben
 ## Struktur
 
 - `index.html` – Startseite
-- `ueber-uns.html`, `leistungen.html`, `webdesign.html`, `betreuung.html`, `domain-hosting.html` – Unternehmens- und Leistungsseiten
+- `ueber-uns.html`, `leistungen.html`, `webdesign.html`, `betreuung.html`, `domain-hosting.html`, `seo.html` – Unternehmens- und Leistungsseiten
 - `referenzen.html` sowie die zwei Projektseiten – Referenzen
 - `faq.html`, `kontakt.html`, `impressum.html`, `datenschutz.html` – Service- und Rechteseiten
 - `css/style.css` – gesamte Gestaltung in einer Datei
