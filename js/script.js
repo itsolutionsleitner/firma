@@ -23,14 +23,28 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.remove('menu-open');
   };
 
-  const updateHeader = () => header?.classList.toggle('is-scrolled', window.scrollY > 12);
+  let previousScrollY = Math.max(0, window.scrollY);
+  const updateHeader = () => {
+    const scrollY = Math.max(0, window.scrollY);
+    header?.classList.toggle('is-scrolled', scrollY > 12);
+    const navigationInUse = navLinks?.classList.contains('is-open') ||
+      header?.querySelector(':focus-visible, .has-submenu.open');
+    if (scrollY < previousScrollY || scrollY <= (header?.offsetHeight || 82) || navigationInUse) {
+      header?.classList.remove('is-hidden');
+    } else if (scrollY > previousScrollY) {
+      header?.classList.add('is-hidden');
+    }
+    previousScrollY = scrollY;
+  };
   updateHeader();
   window.addEventListener('scroll', updateHeader, { passive: true });
+  header?.addEventListener('focusin', () => header.classList.remove('is-hidden'));
 
   menuToggle?.addEventListener('click', () => {
     const isOpen = navLinks?.classList.toggle('is-open');
     menuToggle.setAttribute('aria-expanded', String(isOpen));
     document.body.classList.toggle('menu-open', isOpen);
+    header?.classList.remove('is-hidden');
   });
 
   document.querySelectorAll('.has-submenu > button').forEach((button, index) => {
