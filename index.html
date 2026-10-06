@@ -82,37 +82,70 @@
 
     <main id="main">
       <section class="hero-showcase" aria-labelledby="hero-title">
-        <div class="hero-showcase__visual">
-          <img src="images/hero-websites-character.png" width="1536" height="1024"
-            alt="Desktop, Tablet und Smartphone mit einem alpinen Website-Entwurf auf hellen Steinpodesten vor einer limettengrünen Skulptur"
-            fetchpriority="high" decoding="async" />
-        </div>
         <div class="container hero-showcase__inner">
           <div class="hero-showcase__copy">
             <p class="hero-showcase__eyebrow">Linaro Digital <span>Webdesign aus der Steiermark</span></p>
-            <h1 id="hero-title">
-              <span>Websites</span>
-              <span>mit</span>
-              <em>Charakter.</em>
-            </h1>
+            <div class="hero-showcase__headline">
+              <h1 id="hero-title">
+                <span>Websites mit</span>
+                <em>Charakter.</em>
+              </h1>
+              <svg class="hero-showcase__spark" viewBox="0 0 120 110" aria-hidden="true" focusable="false">
+                <path d="M52 10H68V40L94 25L102 39L76 54L102 69L94 83L68 68V98H52V68L26 83L18 69L44 54L18 39L26 25L52 40Z" />
+              </svg>
+              <svg class="hero-showcase__rays hero-showcase__rays--left" viewBox="0 0 64 90" aria-hidden="true" focusable="false">
+                <path d="M36 29L19 4M29 49L3 37M31 72L8 82" />
+              </svg>
+              <svg class="hero-showcase__rays hero-showcase__rays--right" viewBox="0 0 64 90" aria-hidden="true" focusable="false">
+                <path d="M13 31L24 7M28 45L51 30" />
+              </svg>
+            </div>
             <p class="hero-showcase__intro">
-              Durchdachtes Webdesign, das begeistert<br class="hero-showcase__desktop-break" />
-              und Ihre Marke sichtbar macht.<br class="hero-showcase__desktop-break" />
-              Ein Auftritt, der nach Ihnen aussieht. Und im Kopf bleibt.
+              Individuelle Websites für Unternehmen, die mehr wollen als 08/15.<br class="hero-showcase__desktop-break" />
+              Strategisch gedacht, visuell stark und mit Liebe zum Detail.
             </p>
-            <div class="hero-showcase__clients" aria-label="Ausgewählte Kunden">
-              <p>Unternehmen, die mir vertrauen</p>
-              <div class="hero-showcase__logos">
-                <a href="referenzen.html#hairdesign" aria-label="Referenz Hairdesign Barbara Leitner ansehen">
-                  <img src="images/HD-Leitner-Logo_rgb.jpg" width="652" height="221"
-                    alt="Hairdesign Barbara Leitner" decoding="async" />
-                </a>
-                <a class="hero-showcase__logo--neuburger" href="referenzen.html#neuburger"
-                  aria-label="Referenz Neuburger Metalltechnik ansehen">
-                  <img src="images/Logo_Neuburger Metalltechnik.jpg" width="1024" height="1024"
-                    alt="Neuburger Metalltechnik" decoding="async" />
-                </a>
+            <div class="hero-showcase__actions">
+              <a class="hero-showcase__cta" href="kontakt.html">Projekt anfragen <span aria-hidden="true">→</span></a>
+              <a class="hero-showcase__work-link" href="referenzen.html">Meine Arbeiten ansehen</a>
+            </div>
+          </div>
+          <div class="hero-showcase__preview-wrap">
+            <div class="hero-showcase__annotation hero-showcase__annotation--left" aria-hidden="true">
+              Mehr Sichtbarkeit<br />für Ihr Unternehmen
+              <svg viewBox="0 0 90 70" focusable="false"><path d="M12 3Q22 52 77 50M61 36L78 50L60 64" /></svg>
+            </div>
+            <div class="hero-showcase__annotation hero-showcase__annotation--right" aria-hidden="true">
+              Webdesign<br />aus der Steiermark
+              <svg viewBox="0 0 90 70" focusable="false"><path d="M76 3Q67 52 12 50M29 36L11 50L30 64" /></svg>
+            </div>
+            <figure class="hero-preview" aria-label="Illustrativer Website-Entwurf für ein Holzbauunternehmen">
+              <div class="hero-preview__chrome" aria-hidden="true">
+                <span class="hero-preview__dots"><i></i><i></i><i></i></span>
+                <span class="hero-preview__address">Website-Konzept</span>
+                <span class="hero-preview__menu">☰</span>
               </div>
+              <div class="hero-preview__page">
+                <div class="hero-preview__nav" aria-hidden="true">
+                  <span class="hero-preview__brand">Holzwerk<span>.</span></span>
+                  <span class="hero-preview__nav-items">Start <span>Leistungen</span> Über uns <span>Projekte</span></span>
+                  <span class="hero-preview__contact">Kontakt</span>
+                </div>
+                <div class="hero-preview__body">
+                  <div class="hero-preview__copy">
+                    <p class="hero-preview__eyebrow">Nachhaltig bauen</p>
+                    <p class="hero-preview__title">Räume mit<br /><em>Zukunft.</em></p>
+                    <p class="hero-preview__description">Wir schaffen Lebensräume aus Holz – nachhaltig, regional und mit Leidenschaft.</p>
+                    <span class="hero-preview__sample-link" aria-hidden="true">Unser Handwerk <span>↗</span></span>
+                  </div>
+                  <img class="hero-preview__image" src="images/hero-holzwerk-concept.png"
+                    width="1536" height="1024" fetchpriority="high" decoding="async"
+                    alt="Illustratives modernes Holzhaus mit großen Glasflächen in einer Berglandschaft" />
+                </div>
+              </div>
+              <figcaption class="hero-preview__caption">Designkonzept · Beispiel für einen individuellen Webauftritt</figcaption>
+            </figure>
+            <div class="hero-showcase__preview-badge" aria-hidden="true">
+              <span>↗</span><p>Modernes Webdesign<br />für regional starke Marken.</p>
             </div>
           </div>
         </div>
@@ -184,7 +217,7 @@
           </div>
           <div class="image-narrative__copy reveal delay-1">
             <p class="section-label">Digitales Handwerk</p>
-            <h2>Klare Gedanken. Starke Bilder. Saubere Technik.</h2>
+            <h2>Klare Gedanken. <span class="editorial-mark">Starke Bilder.</span> Saubere Technik.</h2>
             <p>
               Eine gute Website muss nicht laut sein. Aber sie darf Charakter zeigen, Vertrauen
               aufbauen und auf jedem Bildschirm mühelos funktionieren. Genau dort treffen sich
@@ -222,9 +255,9 @@
             <a class="cinema-card cinema-card--care reveal delay-1" data-tilt href="betreuung.html"
               ><span class="cinema-card__media"
                 ><img
-                  src="images/collaboration-studio.png"
-                  width="1086"
-                  height="1448"
+                  src="images/collaboration-studio-landscape.png"
+                  width="1536"
+                  height="1024"
                   alt="Gemeinsame Arbeit an einem Website-Konzept"
                   loading="lazy"
                   decoding="async" /></span
@@ -239,9 +272,9 @@
               href="domain-hosting.html"
               ><span class="cinema-card__media"
                 ><img
-                  src="images/hosting-detail.png"
-                  width="1086"
-                  height="1448"
+                  src="images/hosting-detail-landscape.png"
+                  width="1536"
+                  height="1024"
                   alt="Sorgfältig organisierte technische Infrastruktur"
                   loading="lazy"
                   decoding="async" /></span
@@ -306,7 +339,7 @@
           <div class="process-premium__top reveal">
             <p class="section-label">Wie wir zusammenarbeiten</p>
             <div>
-              <h2>Ihr Projekt bleibt persönlich – vom ersten Gespräch bis zum Onlinegang.</h2>
+              <h2>Ihr Projekt bleibt <span class="editorial-mark">persönlich</span> – vom ersten Gespräch bis zum Onlinegang.</h2>
               <p class="process-premium__intro">
                 Sie sprechen während des gesamten Projekts direkt mit mir. Wir treffen
                 Entscheidungen gemeinsam, in verständlichen Schritten und ohne unnötige Umwege.
@@ -376,7 +409,7 @@
         <div class="container">
           <div class="faq-premium__head reveal">
             <p class="section-label">Fragen, bevor sie entstehen</p>
-            <h2>Gut zu wissen.</h2>
+            <h2>Gut zu <span class="editorial-mark">wissen.</span></h2>
           </div>
           <div class="faq faq--premium reveal">
             <details class="faq-item">
@@ -444,27 +477,39 @@
       </section>
     </main>
 
-    <footer class="site-footer site-footer--premium">
+    <footer class="site-footer footer-unified">
       <div class="container">
-        <div class="footer-premium__top">
-          <a class="brand footer-brand" href="index.html"
-            ><span class="brand-mark"></span>Linaro<small>Digital</small></a
-          >
-          <div>
-            <p>Technik, die einfach funktioniert.</p>
-            <a href="mailto:office@itsolutions-leitner.at">office@itsolutions-leitner.at</a
-            ><a href="tel:+436603972228">+43 660 3972228</a>
+        <div class="footer-unified__top">
+          <div class="footer-unified__brand">
+            <a class="brand footer-brand" href="index.html" aria-label="Linaro Digital Startseite"
+              ><span class="brand-mark"></span>Linaro<small>Digital</small></a>
+            <p class="footer-unified__tagline">Technik, die einfach funktioniert.</p>
+            <p class="muted">Webdesign aus der Steiermark.</p>
           </div>
           <div>
-            <a href="ueber-uns.html">Über mich</a><a href="leistungen.html">Leistungen</a
-            ><a href="referenzen.html">Projekte</a><a href="kontakt.html">Kontakt</a>
+            <p class="footer-title">Entdecken</p>
+            <ul class="footer-links">
+              <li><a href="index.html">Start</a></li>
+              <li><a href="ueber-uns.html">Über mich</a></li>
+              <li><a href="leistungen.html">Leistungen</a></li>
+              <li><a href="referenzen.html">Projekte</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="footer-title">Direkt erreichbar</p>
+            <ul class="footer-links">
+              <li><a href="mailto:office@itsolutions-leitner.at">office@itsolutions-leitner.at</a></li>
+              <li><a href="tel:+436603972228">+43 660 3972228</a></li>
+              <li>Mo–Fr, 08:00–17:00</li>
+              <li>8670 Krieglach, Steiermark</li>
+            </ul>
           </div>
         </div>
         <div class="footer-bottom">
           <span>© 2026 Linaro Digital</span>
-          <div>
-            <a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a>
-          </div>
+          <div><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
         </div>
       </div>
     </footer>

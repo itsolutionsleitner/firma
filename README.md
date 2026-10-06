@@ -12,6 +12,26 @@ Statische, responsive Unternehmenswebsite für Leitwerk Digital. Die Website ben
 - `js/script.js` – mobile Navigation, Scroll-Reveals, FAQ-/Cookie-Verhalten und Formularanzeige
 - `images/` – hier kommen Logo, Portrait, Projektfotos und das optionale Hero-Video hinein
 
+## Aktuelles Designsystem
+
+Der zentrierte Startseiten-Hero ist die visuelle Grundlage für alle Seitentypen:
+helle Cremeflächen, Primärfarbe `#D3EE55`, burgunderrote Serifenschrift-Akzente,
+kräftige serifenlose Überschriften, dezente Aqua-Bildrahmen und rechteckige Aktionen.
+Die gemeinsamen Regeln stehen in Abschnitt **18** von `css/style.css`; der
+Startseiten-Hero ist separat in Abschnitt **17** definiert. Gezielte Hervorhebungen
+im Inhalt verwenden `editorial-mark`. Die Schriftarten verwenden lokale Systemfonts,
+ohne externe Font-Anfragen. `images/editorial-spark.svg` enthält den dekorativen Stern.
+
+Abschnitt **19** ergänzt die Feinabstimmung: wechselnde Farb- und Schriftakzente,
+vollständig sichtbare Leistungsbilder ohne Browserleiste, kompakte mobile Intro-Bilder,
+bildgestützte Abschlussbereiche, das Webdesign-Zitat und die gestaltete FAQ-Seite.
+Alle 15 HTML-Seiten verwenden denselben `footer-unified`-Footer. Die zusätzlichen
+Bildflächen nutzen vorhandene Motive; der Startseiten-Hero bleibt unverändert.
+
+Eine lokale Strukturprüfung kann in PowerShell mit `./tools/validate-site.ps1`
+ausgeführt werden. Sie kontrolliert HTML-Verschachtelung, doppelte IDs, lokale
+Dateien/Sprungziele und CSS-Bildpfade. Sie ersetzt keine visuelle Browserprüfung.
+
 ## Code in VS Code bearbeiten
 
 Für dieses Projekt sind einheitliche Formatierungsregeln hinterlegt. VS Code empfiehlt beim

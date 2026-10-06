@@ -52,7 +52,7 @@
         </div>
       </section>
       <section class="section">
-        <div class="container grid-2">
+        <div class="container grid-2 about-story">
           <div class="team-card reveal">
             <img
               class="team-card__portrait"
@@ -66,23 +66,37 @@
             <h3 class="team-card__name"><span class="team-card__title">Dipl.-Wirt.-Ing. (FH)</span><span>Christoph Leitner, BEd</span></h3>
             <p class="muted">Inhaber · Linaro Digital</p>
           </div>
-          <div class="reveal delay-1">
+          <div class="about-story__copy reveal delay-1">
             <p class="eyebrow">Ein guter digitaler Auftritt beginnt mit Zuhören</p>
-            <h2>Verständliche Beratung statt Fachchinesisch.</h2>
-            <p class="lead" style="margin-top: 1.5rem">
-              Ich bin Christoph Leitner, Gründer von Linaro Digital. Durch meine Erfahrung in IT,
-              Elektrotechnik und Automatisierung verbinde ich technisches Verständnis mit einem
-              klaren Blick für das, was für Ihre Kunden zählt.
-            </p>
-            <p>
-              Mir ist wichtig, dass Sie sich bei Ihrem Webprojekt gut begleitet fühlen – unabhängig
-              davon, wie vertraut Sie mit digitalen Themen sind. Deshalb gibt es bei mir keinen
-              unnötigen Jargon, sondern ehrliche Empfehlungen und nachvollziehbare Entscheidungen.
-            </p>
-            <p>
-              Ihr Auftritt soll zu Ihnen passen, zuverlässig funktionieren und Sie langfristig
-              unterstützen. Genau daran arbeite ich persönlich mit Ihnen.
-            </p>
+            <h2><span class="editorial-mark">Verständliche Beratung</span> statt Fachchinesisch.</h2>
+            <p class="about-story__intro">Ich bin Christoph Leitner, Gründer von Linaro Digital.</p>
+            <div class="about-story__chapters">
+              <div class="about-story__chapter">
+                <span class="about-story__number" aria-hidden="true">01</span>
+                <div>
+                  <h3>Technisches Verständnis.</h3>
+                  <p>Durch meine Erfahrung in IT, Elektrotechnik und Automatisierung verbinde ich
+                    technisches Verständnis mit einem klaren Blick für das, was für Ihre Kunden zählt.</p>
+                </div>
+              </div>
+              <div class="about-story__chapter">
+                <span class="about-story__number" aria-hidden="true">02</span>
+                <div>
+                  <h3>Ehrliche Begleitung.</h3>
+                  <p>Mir ist wichtig, dass Sie sich bei Ihrem Webprojekt gut begleitet fühlen – unabhängig
+                    davon, wie vertraut Sie mit digitalen Themen sind. Deshalb gibt es bei mir keinen
+                    unnötigen Jargon, sondern ehrliche Empfehlungen und nachvollziehbare Entscheidungen.</p>
+                </div>
+              </div>
+              <div class="about-story__chapter">
+                <span class="about-story__number" aria-hidden="true">03</span>
+                <div>
+                  <h3>Ein Auftritt, der zu Ihnen passt.</h3>
+                  <p>Ihr Auftritt soll zu Ihnen passen, zuverlässig funktionieren und Sie langfristig
+                    unterstützen. Genau daran arbeite ich persönlich mit Ihnen.</p>
+                </div>
+              </div>
+            </div>
             <div class="button-row">
               <a class="button button--primary" href="kontakt.html">Kennenlernen</a>
             </div>
@@ -94,7 +108,7 @@
           <div class="section__head reveal">
             <div>
               <p class="eyebrow">Wofür ich stehe</p>
-              <h2>Die Zusammenarbeit soll einfach sein.</h2>
+              <h2>Die Zusammenarbeit soll <span class="editorial-mark">einfach sein.</span></h2>
             </div>
             <p>
               Ein professioneller Webauftritt entsteht nicht im luftleeren Raum. Er entsteht im
@@ -136,40 +150,44 @@
         </div>
       </section>
       <section class="cta-band">
-        <div class="container">
-          <div>
+        <div class="container cta-panel">
+          <div class="cta-panel__copy">
             <p class="eyebrow">Lassen Sie uns sprechen</p>
             <h2>Was soll Ihre Website für Sie möglich machen?</h2>
           </div>
           <a class="button button--primary" href="kontakt.html">Projekt anfragen</a>
+          <figure class="cta-panel__visual">
+            <img src="images/christoph_foto.jpg" width="632" height="609" loading="lazy" decoding="async" alt="Portrait von Christoph Leitner, Inhaber von Linaro Digital" />
+            <figcaption>Für Ihren nächsten Schritt.</figcaption>
+          </figure>
         </div>
       </section>
     </main>
-    <footer class="site-footer">
+    <footer class="site-footer footer-unified">
       <div class="container">
-        <div class="footer-top">
-          <div>
-            <a class="brand footer-brand" href="index.html"
-              ><span class="brand-mark"></span>Linaro<small>Digital</small></a
-            >
-            <p class="muted">Technik, die einfach funktioniert.</p>
+        <div class="footer-unified__top">
+          <div class="footer-unified__brand">
+            <a class="brand footer-brand" href="index.html" aria-label="Linaro Digital Startseite"
+              ><span class="brand-mark"></span>Linaro<small>Digital</small></a>
+            <p class="footer-unified__tagline">Technik, die einfach funktioniert.</p>
+            <p class="muted">Webdesign aus der Steiermark.</p>
           </div>
           <div>
-            <p class="footer-title">Navigation</p>
+            <p class="footer-title">Entdecken</p>
             <ul class="footer-links">
+              <li><a href="index.html">Start</a></li>
               <li><a href="ueber-uns.html">Über mich</a></li>
               <li><a href="leistungen.html">Leistungen</a></li>
               <li><a href="referenzen.html">Projekte</a></li>
+              <li><a href="faq.html">FAQ</a></li>
               <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
           </div>
           <div>
-            <p class="footer-title">Kontakt</p>
+            <p class="footer-title">Direkt erreichbar</p>
             <ul class="footer-links">
+              <li><a href="mailto:office@itsolutions-leitner.at">office@itsolutions-leitner.at</a></li>
               <li><a href="tel:+436603972228">+43 660 3972228</a></li>
-              <li>
-                <a href="mailto:office@itsolutions-leitner.at">office@itsolutions-leitner.at</a>
-              </li>
               <li>Mo–Fr, 08:00–17:00</li>
               <li>8670 Krieglach, Steiermark</li>
             </ul>
@@ -177,9 +195,7 @@
         </div>
         <div class="footer-bottom">
           <span>© 2026 Linaro Digital</span>
-          <div>
-            <a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a>
-          </div>
+          <div><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
         </div>
       </div>
     </footer>

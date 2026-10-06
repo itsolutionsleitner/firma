@@ -87,7 +87,7 @@
             >
             <div class="service-editorial__copy">
               <p class="section-label">Webdesign</p>
-              <h2>Eine Website, die sich nach Ihnen anfühlt.</h2>
+              <h2>Eine Website, die sich <span class="editorial-mark">nach Ihnen</span> anfühlt.</h2>
               <p>
                 Ihr Angebot verdient mehr als eine Vorlage. Gemeinsam entwickeln wir einen digitalen
                 Auftritt, der Orientierung schafft, Charakter zeigt und den nächsten Schritt leicht
@@ -115,7 +115,7 @@
             >
             <div class="service-editorial__copy">
               <p class="section-label">Betreuung</p>
-              <h2>Ein Auftritt, der mit Ihnen Schritt hält.</h2>
+              <h2>Ein Auftritt, der mit Ihnen <span class="editorial-mark">Schritt hält.</span></h2>
               <p>
                 Nach dem Onlinegang müssen Sie nicht allein weitermachen. Auf Wunsch bleibe ich für
                 Änderungen, Updates, Backups und Fragen an Ihrer Seite – verlässlich und persönlich.
@@ -142,7 +142,7 @@
             >
             <div class="service-editorial__copy">
               <p class="section-label">Domain &amp; Hosting</p>
-              <h2>Die Technik darf sich leicht anfühlen.</h2>
+              <h2>Die Technik darf sich <span class="editorial-mark">leicht</span> anfühlen.</h2>
               <p>
                 Domain, Hosting und der sichere Onlinegang sind die Basis Ihres digitalen Auftritts.
                 Ich unterstütze Sie dabei verständlich, vorausschauend und ohne unnötige Umwege.
@@ -162,7 +162,7 @@
               loading="lazy" decoding="async" /><span>04</span></a>
             <div class="service-editorial__copy">
               <p class="section-label">SEO &amp; Sichtbarkeit</p>
-              <h2>Von den richtigen Menschen gefunden werden.</h2>
+              <h2>Von den richtigen Menschen <span class="editorial-mark">gefunden werden.</span></h2>
               <p>Eine überzeugende Website ist der Anfang. Mit passenden Inhalten, einer klaren technischen Basis und lokalem Bezug unterstütze ich Sie dabei, Ihr Angebot besser auffindbar zu machen.</p>
               <ul class="service-editorial__list"><li>Analyse, Suchbegriffe und gezielte Inhaltsoptimierung</li><li>Technische SEO und verständliche Seitenstruktur</li><li>Local SEO und Begleitung bei der Auswertung</li></ul>
               <a class="text-arrow" href="seo.html">SEO entdecken <span>→</span></a>
@@ -172,41 +172,45 @@
       </section>
 
       <section class="cta-band">
-        <div class="container">
-          <div>
+        <div class="container cta-panel">
+          <div class="cta-panel__copy">
             <p class="eyebrow">Noch nicht sicher?</p>
             <h2>Wir finden gemeinsam den richtigen Umfang.</h2>
           </div>
           <a class="button button--primary" href="kontakt.html">Unverbindlich anfragen</a>
+          <figure class="cta-panel__visual">
+            <img src="images/creative-workbench.png" width="1672" height="941" loading="lazy" decoding="async" alt="Kreativer Arbeitsplatz mit Designmaterialien" />
+            <figcaption>Für Ihren nächsten Schritt.</figcaption>
+          </figure>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer footer-unified">
       <div class="container">
-        <div class="footer-top">
-          <div>
-            <a class="brand footer-brand" href="index.html"
-              ><span class="brand-mark"></span>Linaro<small>Digital</small></a
-            >
-            <p class="muted">Technik, die einfach funktioniert.</p>
+        <div class="footer-unified__top">
+          <div class="footer-unified__brand">
+            <a class="brand footer-brand" href="index.html" aria-label="Linaro Digital Startseite"
+              ><span class="brand-mark"></span>Linaro<small>Digital</small></a>
+            <p class="footer-unified__tagline">Technik, die einfach funktioniert.</p>
+            <p class="muted">Webdesign aus der Steiermark.</p>
           </div>
           <div>
-            <p class="footer-title">Navigation</p>
+            <p class="footer-title">Entdecken</p>
             <ul class="footer-links">
+              <li><a href="index.html">Start</a></li>
               <li><a href="ueber-uns.html">Über mich</a></li>
               <li><a href="leistungen.html">Leistungen</a></li>
               <li><a href="referenzen.html">Projekte</a></li>
+              <li><a href="faq.html">FAQ</a></li>
               <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
           </div>
           <div>
-            <p class="footer-title">Kontakt</p>
+            <p class="footer-title">Direkt erreichbar</p>
             <ul class="footer-links">
+              <li><a href="mailto:office@itsolutions-leitner.at">office@itsolutions-leitner.at</a></li>
               <li><a href="tel:+436603972228">+43 660 3972228</a></li>
-              <li>
-                <a href="mailto:office@itsolutions-leitner.at">office@itsolutions-leitner.at</a>
-              </li>
               <li>Mo–Fr, 08:00–17:00</li>
               <li>8670 Krieglach, Steiermark</li>
             </ul>
@@ -214,9 +218,7 @@
         </div>
         <div class="footer-bottom">
           <span>© 2026 Linaro Digital</span>
-          <div>
-            <a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a>
-          </div>
+          <div><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
         </div>
       </div>
     </footer>
