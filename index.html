@@ -100,14 +100,6 @@
                 <path d="M13 31L24 7M28 45L51 30" />
               </svg>
             </div>
-            <p class="hero-showcase__intro">
-              Individuelle Websites für Unternehmen, die mehr wollen als 08/15.<br class="hero-showcase__desktop-break" />
-              Strategisch gedacht, visuell stark und mit Liebe zum Detail.
-            </p>
-            <div class="hero-showcase__actions">
-              <a class="hero-showcase__cta" href="kontakt.html">Projekt anfragen <span aria-hidden="true">→</span></a>
-              <a class="hero-showcase__work-link" href="referenzen.html">Meine Arbeiten ansehen</a>
-            </div>
           </div>
           <div class="hero-showcase__preview-wrap">
             <div class="hero-showcase__annotation hero-showcase__annotation--left" aria-hidden="true">
@@ -151,7 +143,7 @@
         </div>
       </section>
 
-      <section class="premium-intro" id="intro">
+      <section class="premium-intro section-surface section-surface--white" id="intro">
         <div class="container premium-intro__grid">
             <div class="premium-intro__visual reveal">
               <p class="section-label">Nicht einfach nur online</p>
@@ -173,7 +165,7 @@
         </div>
       </section>
 
-      <section class="statement-stage">
+      <section class="statement-stage section-surface section-surface--aqua">
         <div class="container statement-stage__layout">
           <div class="statement-stage__copy reveal">
             <p class="section-label section-label--light">Persönlich statt beliebig</p>
@@ -204,7 +196,7 @@
         </div>
       </section>
 
-      <section class="image-narrative section">
+      <section class="image-narrative section section-surface section-surface--cream">
         <div class="container image-narrative__grid">
           <div class="image-narrative__image reveal" data-tilt>
             <img
@@ -228,7 +220,7 @@
         </div>
       </section>
 
-      <section class="services-cinema">
+      <section class="services-cinema section-surface section-surface--leaf">
         <div class="container">
           <div class="services-cinema__head reveal">
             <p class="section-label">Was ich für Sie umsetze</p>
@@ -296,7 +288,7 @@
         </div>
       </section>
 
-      <section class="work-stage section">
+      <section class="work-stage section section-surface section-surface--white">
         <div class="container">
           <div class="work-stage__head reveal">
             <p class="section-label">Ausgewählte Projekte</p>
@@ -334,7 +326,7 @@
         </div>
       </section>
 
-      <section class="process-premium section">
+      <section class="process-premium section section-surface section-surface--aqua">
         <div class="container">
           <div class="process-premium__top reveal">
             <p class="section-label">Wie wir zusammenarbeiten</p>
@@ -405,7 +397,7 @@
         </div>
       </section>
 
-      <section class="faq-premium section">
+      <section class="faq-premium section section-surface section-surface--white">
         <div class="container">
           <div class="faq-premium__head reveal">
             <p class="section-label">Fragen, bevor sie entstehen</p>
@@ -457,7 +449,7 @@
         </div>
       </section>
 
-      <section class="closing-stage">
+      <section class="closing-stage section-surface section-surface--cream">
         <div class="closing-stage__image">
           <img
             src="images/hero-digital-studio.png"
@@ -485,6 +477,23 @@
               ><span class="brand-mark"></span>Linaro<small>Digital</small></a>
             <p class="footer-unified__tagline">Technik, die einfach funktioniert.</p>
             <p class="muted">Webdesign aus der Steiermark.</p>
+            <nav class="footer-social" aria-label="Social Media">
+              <!-- Profil-URLs ergänzen, sobald Instagram und Facebook verfügbar sind. -->
+              <a class="footer-social__link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram öffnen (neuer Tab)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false">
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                </svg>
+                <span>Instagram</span>
+              </a>
+              <a class="footer-social__link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook öffnen (neuer Tab)">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                  <path d="M14 22v-9h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.5A25 25 0 0 0 15 1c-3 0-5 1.8-5 5v3H7v4h3v9z" />
+                </svg>
+                <span>Facebook</span>
+              </a>
+            </nav>
           </div>
           <div>
             <p class="footer-title">Entdecken</p>
@@ -513,15 +522,19 @@
         </div>
       </div>
     </footer>
-    <aside class="cookie-banner" hidden aria-label="Hinweis zur lokalen Speicherung">
-      <p>
-        Diese Website verwendet keine Analyse- oder Marketing-Cookies. Es wird lediglich
-        gespeichert, dass Sie diesen Hinweis geschlossen haben.
-      </p>
-      <div>
-        <button class="button button--plain" type="button" data-cookie-choice>Verstanden</button
-        ><a href="datenschutz.html">Datenschutz</a>
+    <dialog class="cookie-banner" hidden aria-labelledby="cookie-note-title" aria-describedby="cookie-note-description">
+      <div class="cookie-banner__content">
+        <span class="cookie-banner__eyebrow">Ihre Privatsphäre</span>
+        <h2 id="cookie-note-title" tabindex="-1" autofocus>Ein kurzer<br /><em>Datenschutzhinweis.</em></h2>
+        <p id="cookie-note-description">
+          Diese Website verwendet keine Analyse- oder Marketing-Cookies. Es wird lediglich lokal
+          in Ihrem Browser gespeichert, dass Sie diesen Hinweis geschlossen haben.
+        </p>
+        <div class="cookie-banner__actions">
+          <button class="button button--primary" type="button" data-cookie-choice>Verstanden <span aria-hidden="true">→</span></button>
+          <a href="datenschutz.html">Datenschutz lesen</a>
+        </div>
       </div>
-    </aside>
+    </dialog>
   </body>
 </html>

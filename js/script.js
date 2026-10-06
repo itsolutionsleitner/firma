@@ -171,12 +171,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let consent = document.querySelector('.cookie-banner');
   if (!consent) {
-    consent = document.createElement('aside');
+    consent = document.createElement('dialog');
     consent.className = 'cookie-banner';
     consent.hidden = true;
-    consent.setAttribute('aria-label', 'Hinweis zur lokalen Speicherung');
+    consent.setAttribute('aria-labelledby', 'cookie-note-title');
+    consent.setAttribute('aria-describedby', 'cookie-note-description');
     consent.innerHTML =
-      '<p>Diese Website verwendet keine Analyse- oder Marketing-Cookies. Es wird lediglich gespeichert, dass Sie diesen Hinweis geschlossen haben.</p><div><button class="button button--plain" type="button" data-cookie-choice>Verstanden</button><a href="datenschutz.html">Datenschutz</a></div>';
+      '<div class="cookie-banner__content"><span class="cookie-banner__eyebrow">Ihre Privatsphäre</span><h2 id="cookie-note-title" tabindex="-1" autofocus>Ein kurzer<br /><em>Datenschutzhinweis.</em></h2><p id="cookie-note-description">Diese Website verwendet keine Analyse- oder Marketing-Cookies. Es wird lediglich lokal in Ihrem Browser gespeichert, dass Sie diesen Hinweis geschlossen haben.</p><div class="cookie-banner__actions"><button class="button button--primary" type="button" data-cookie-choice>Verstanden <span aria-hidden="true">→</span></button><a href="datenschutz.html">Datenschutz lesen</a></div></div>';
     document.body.append(consent);
   }
   const safelyGetConsent = () => {
@@ -188,18 +189,27 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   const dismissConsent = () => {
     if (!consent) return;
+    if (consent.open) consent.close();
     consent.classList.add('is-dismissed');
     consent.hidden = true;
     consent.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('cookie-note-open');
   };
   const showConsent = () => {
     if (!consent) return;
     consent.classList.remove('is-dismissed');
     consent.hidden = false;
     consent.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('cookie-note-open');
+    if (!consent.open) consent.showModal();
   };
+  consent?.addEventListener('cancel', (event) => {
+    event.preventDefault();
+    dismissConsent();
+  });
   if (consent) {
-    if (safelyGetConsent()) dismissConsent();
+    // Legal information must remain directly readable from the dialog's link.
+    if (['datenschutz.html', 'impressum.html'].includes(pageName) || safelyGetConsent()) dismissConsent();
     else showConsent();
   }
   consent?.querySelectorAll('[data-cookie-choice]').forEach((button) => {

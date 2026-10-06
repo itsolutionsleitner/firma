@@ -28,6 +28,11 @@ bildgestützte Abschlussbereiche, das Webdesign-Zitat und die gestaltete FAQ-Sei
 Alle 15 HTML-Seiten verwenden denselben `footer-unified`-Footer. Die zusätzlichen
 Bildflächen nutzen vorhandene Motive; der Startseiten-Hero bleibt unverändert.
 
+Abschnittswechsel erhalten explizite `section-surface--white`, `--cream`, `--aqua`,
+`--leaf` oder `--rose`-Klassen. Die dazugehörigen `--surface-*`-Farben sind zentral
+definiert und gelten identisch auf Desktop und Mobilgeräten. So bleiben Farbwechsel
+bewusst gesetzt, auch wenn später Abschnitte ergänzt oder umsortiert werden.
+
 Eine lokale Strukturprüfung kann in PowerShell mit `./tools/validate-site.ps1`
 ausgeführt werden. Sie kontrolliert HTML-Verschachtelung, doppelte IDs, lokale
 Dateien/Sprungziele und CSS-Bildpfade. Sie ersetzt keine visuelle Browserprüfung.

@@ -5511,7 +5511,7 @@ body:has(> .site-header:not(.site-header--dark)) {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  font-size: 0.65rem;
+  font-size: clamp(0.8rem, 1.1vw, 1rem);
   font-weight: 700;
   gap: 0.65rem 1.2rem;
   justify-content: center;
@@ -5532,7 +5532,7 @@ body:has(> .site-header:not(.site-header--dark)) {
 .hero-showcase h1 {
   color: var(--ink-deep);
   font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
-  font-size: clamp(4rem, 7.8vw, 8.5rem);
+  font-size: clamp(4rem, 8.6vw, 9.5rem);
   font-weight: 900;
   letter-spacing: -0.075em;
   line-height: 0.98;
@@ -5643,7 +5643,7 @@ body:has(> .site-header:not(.site-header--dark)) {
   outline-offset: 5px;
 }
 .hero-showcase__preview-wrap {
-  margin: 2rem auto 0;
+  margin: clamp(3rem, 5vw, 4.5rem) auto 0;
   max-width: 920px;
   position: relative;
 }
@@ -5851,7 +5851,7 @@ body:has(> .site-header:not(.site-header--dark)) {
     width: min(700px, calc(100% - 2.5rem));
   }
   .hero-showcase__eyebrow {
-    font-size: 0.57rem;
+    font-size: clamp(0.7rem, 1.7vw, 0.85rem);
     gap: 0.5rem;
     margin-bottom: 2.7rem;
   }
@@ -5861,7 +5861,7 @@ body:has(> .site-header:not(.site-header--dark)) {
     padding: 0;
   }
   .hero-showcase__headline { max-width: 100%; }
-  .hero-showcase h1 { font-size: clamp(2.65rem, 11.4vw, 5.5rem); }
+  .hero-showcase h1 { font-size: clamp(2.1rem, 11.8vw, 5.75rem); }
   .hero-showcase__spark {
     right: -0.3rem;
     top: -2.4rem;
@@ -5886,7 +5886,7 @@ body:has(> .site-header:not(.site-header--dark)) {
   }
   .hero-showcase__cta { font-size: 0.9rem; padding: 0.7rem 1.3rem; }
   .hero-showcase__work-link { font-size: 0.9rem; }
-  .hero-showcase__preview-wrap { margin-top: 2rem; }
+  .hero-showcase__preview-wrap { margin-top: 3rem; }
   .hero-preview__page { padding: 0 1.4rem; }
   .hero-preview__nav-items { gap: 0.8rem; }
   .hero-preview__body { gap: 0.9rem; }
@@ -7037,6 +7037,157 @@ body:has(.faq-sheet) .page-hero h1 .lime {
   .faq--index .faq-item summary { padding-right: 1.8rem; }
   .footer-unified__top { grid-template-columns: 1fr; }
   .footer-unified .footer-bottom { align-items: flex-start; flex-direction: column; }
+}
+
+/* Social Media: reine Links ohne eingebettete Plattform-Skripte oder Tracking. */
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.5rem;
+}
+.footer-social__link {
+  align-items: center;
+  background: var(--white);
+  border: 1px solid var(--editorial-line);
+  border-radius: 8px;
+  color: var(--ink-deep);
+  display: inline-flex;
+  font-size: 0.8rem;
+  font-weight: 700;
+  gap: 0.55rem;
+  min-height: 44px;
+  padding: 0.65rem 0.85rem;
+  transition: background 0.2s, border-color 0.2s;
+}
+.footer-social__link svg { flex-shrink: 0; height: 19px; width: 19px; }
+.footer-social__link:hover { background: var(--lime); border-color: var(--lime); }
+.footer-social__link:focus-visible { outline: 2px solid var(--coral); outline-offset: 4px; }
+
+/* Datenschutzhinweis: nativer modaler Dialog, zentriert und mobil bildschirmfüllend. */
+body.cookie-note-open { overflow: hidden; }
+.cookie-banner {
+  background: var(--paper);
+  border: 1px solid var(--editorial-line);
+  border-radius: 16px;
+  box-shadow: 0 24px 90px rgba(16, 30, 34, 0.25);
+  color: var(--ink-deep);
+  display: block;
+  height: auto;
+  inset: 0;
+  margin: auto;
+  max-height: calc(100vh - 3rem);
+  max-height: calc(100dvh - 3rem);
+  max-width: 560px;
+  overflow: auto;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  position: fixed;
+  width: calc(100% - 3rem);
+}
+.cookie-banner::backdrop {
+  background: rgba(16, 30, 34, 0.55);
+  backdrop-filter: blur(5px);
+}
+.cookie-banner .cookie-banner__content {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  justify-content: center;
+}
+.cookie-banner__eyebrow {
+  color: var(--ink-soft);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  margin-bottom: 1.3rem;
+  text-transform: uppercase;
+}
+.cookie-banner h2 {
+  font-family: var(--display);
+  font-size: clamp(1.65rem, 4vw, 2.5rem);
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  line-height: 1.15;
+  margin: 0 0 1.4rem;
+  overflow-wrap: anywhere;
+}
+.cookie-banner h2 em {
+  color: var(--coral);
+  font-family: var(--editorial-serif);
+  font-style: italic;
+  font-weight: 700;
+}
+.cookie-banner p { color: var(--ink-soft); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+.cookie-banner .cookie-banner__actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 1.8rem;
+}
+.cookie-banner .button { font-size: 0.9rem; gap: 1rem; min-height: 48px; padding: 0.8rem 1.2rem; }
+.cookie-banner a { font-size: 0.8rem; text-decoration: underline; text-underline-offset: 0.25rem; }
+.cookie-banner a:hover { color: var(--coral); }
+@media (max-width: 600px) {
+  .cookie-banner {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    height: 100vh;
+    height: 100dvh;
+    inset: 0;
+    margin: 0;
+    max-height: 100vh;
+    max-height: 100dvh;
+    max-width: none;
+    padding: max(2rem, env(safe-area-inset-top)) max(1.5rem, env(safe-area-inset-right)) max(2rem, env(safe-area-inset-bottom)) max(1.5rem, env(safe-area-inset-left));
+    width: 100%;
+  }
+  .cookie-banner .cookie-banner__content { min-height: 100%; }
+  .cookie-banner h2 { font-size: clamp(1.65rem, 7vw, 2.4rem); }
+  .cookie-banner .cookie-banner__actions { align-items: stretch; flex-direction: column; gap: 1.3rem; }
+  .cookie-banner .button { justify-content: space-between; width: 100%; }
+  .cookie-banner a { align-self: center; padding: 0.5rem; }
+}
+
+/* Abschnittsflächen: vorhandene Markenfarben mit klar erkennbaren Wechseln. */
+:root {
+  --surface-white: #fffdf8;
+  --surface-cream: #f3eee3;
+  --surface-aqua: #cce4dd;
+  --surface-leaf: #e7eec4;
+  --surface-rose: #f1dfdb;
+}
+.section-surface--white { --section-surface: var(--surface-white); }
+.section-surface--cream { --section-surface: var(--surface-cream); }
+.section-surface--aqua { --section-surface: var(--surface-aqua); }
+.section-surface--leaf { --section-surface: var(--surface-leaf); }
+.section-surface--rose { --section-surface: var(--surface-rose); }
+main > section.section-surface,
+.page--references main > .section--ink.section-surface:last-child {
+  background: var(--section-surface);
+  border-top: 1px solid rgba(16, 30, 34, 0.12);
+}
+/* Der Bildverlauf übernimmt die Fläche, damit der Abschluss nicht wieder weiß wirkt. */
+.closing-stage.section-surface::after {
+  background: linear-gradient(90deg, var(--section-surface) 20%, rgba(243, 238, 227, 0.5));
+}
+/* Die vier Leistungen sind eigenständige Kapitel innerhalb derselben Section. */
+.services-overview .service-editorial {
+  background: var(--surface-cream);
+  border: 1px solid var(--editorial-line);
+  border-radius: 12px;
+  gap: clamp(2rem, 5vw, 5rem);
+  margin-bottom: 2rem;
+  padding: clamp(1.5rem, 3.5vw, 3rem);
+}
+.services-overview .service-editorial:nth-child(even) { background: var(--surface-aqua); }
+.services-overview .service-editorial:last-child { margin-bottom: 0; }
+@media (max-width: 850px) {
+  .services-overview .service-editorial { gap: 1.5rem; grid-template-columns: 1fr; padding: 1.4rem; }
+  .services-overview .service-editorial--reverse .service-editorial__image,
+  .services-overview .service-editorial--reverse .service-editorial__copy { grid-column: 1; grid-row: auto; }
 }
 
 /* === 20. GEZIELTE VERFEINERUNGEN: LEISTUNGSBILDER, PORTRAIT UND BETREUUNG === */
