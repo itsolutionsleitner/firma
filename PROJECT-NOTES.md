@@ -7,7 +7,7 @@ Dieses Dokument wird vor jedem neuen Website-Projekt gemeinsam mit dem Kunden au
 ## 1. Basis-Informationen
 
 **Firmenname:**
-_Leitwerk Digital_
+_Leinaro_
 
 **Branche / Was macht die Firma?**
 _Webdesign, Hosting, SEO, Digital Design_
@@ -22,7 +22,7 @@ _2026_
 _"Technik, die einfach funktioniert."_
 
 **Kurze Firmenbeschreibung in eigenen Worten:**
-_Leitwerk Digital Der Schwerpunkt liegt zunächst auf Webdesign, Hosting, laufender Website-Betreuung und grundlegender Suchmaschinenoptimierung. Dabei stehen persönliche Beratung, individuelle Lösungen und eine technisch saubere Umsetzung im Vordergrund. Langfristig soll das Leistungsangebot um weitere digitale und IT-nahe Dienstleistungen erweitert werden._
+_Leinaro Der Schwerpunkt liegt zunächst auf Webdesign, Hosting, laufender Website-Betreuung und grundlegender Suchmaschinenoptimierung. Dabei stehen persönliche Beratung, individuelle Lösungen und eine technisch saubere Umsetzung im Vordergrund. Langfristig soll das Leistungsangebot um weitere digitale und IT-nahe Dienstleistungen erweitert werden._
 
 ---
 
@@ -55,7 +55,7 @@ _Montag bis Freitag, 08:00–17:00 Uhr / Termine nach Vereinbarung_
 _(Wer soll auf der Website vorkommen? Name, Rolle, kurze Beschreibung)_
 
 | Name | Rolle | Kurzbeschreibung |
-|Christoph Leitner|Inhaber|Ich bin Christoph Leitner, Gründer von Leitwerk Digital. Durch meine Erfahrung in den Bereichen IT, Elektrotechnik und Automatisierung verbinde ich technisches Know-how mit verständlicher Beratung und persönlicher Betreuung. Mein Ziel ist es, zuverlässige und moderne Lösungen umzusetzen, die genau zu meinen Kunden passen.|
+|Christoph Leitner|Inhaber|Ich bin Christoph Leitner, Gründer von Leinaro. Durch meine Erfahrung in den Bereichen IT, Elektrotechnik und Automatisierung verbinde ich technisches Know-how mit verständlicher Beratung und persönlicher Betreuung. Mein Ziel ist es, zuverlässige und moderne Lösungen umzusetzen, die genau zu meinen Kunden passen.|
 |      |       |                 |
 |      |       |                 |
 |      |       |                 |
@@ -141,7 +141,7 @@ Alle Betreuungspakete sind jederzeit kündbar.
 
 _(Was macht die Firma besonders? Warum soll der Kunde genau hier anfragen?)_
 
-Leitwerk Digital steht für persönliche Betreuung, verständliche Beratung und technisch saubere Lösungen. Kunden erhalten keine Standardlösung, sondern eine individuell abgestimmte Umsetzung mit direktem Ansprechpartner, kurzen Wegen und zuverlässiger Betreuung auch nach Projektabschluss.
+Leinaro steht für persönliche Betreuung, verständliche Beratung und technisch saubere Lösungen. Kunden erhalten keine Standardlösung, sondern eine individuell abgestimmte Umsetzung mit direktem Ansprechpartner, kurzen Wegen und zuverlässiger Betreuung auch nach Projektabschluss.
 
 
 **Welche drei Vorteile sollen besonders hervorgehoben werden?**
@@ -474,7 +474,7 @@ ________________________________________
 **Gibt es Formulierungen, die vermieden werden sollen?**
 - Übertriebene Werbeversprechen wie „die beste Website“ oder „garantierter Erfolg“
 - Zu viele englische Fachbegriffe und unnötiger IT-Jargon
-- Unpersönliche Formulierungen wie „wir bieten“ oder „unser Team“, da Leitwerk Digital derzeit ein Einzelunternehmen ist
+- Unpersönliche Formulierungen wie „wir bieten“ oder „unser Team“, da Leinaro derzeit ein Einzelunternehmen ist
 - Zu lockere oder unseriöse Formulierungen
 - Aggressive Verkaufsformulierungen wie „Jetzt sofort kaufen“
 - Unklare Aussagen ohne konkreten Kundennutzen
@@ -615,7 +615,7 @@ _World4You_
 - [X] Nein
 
 **Soll die Website technisch bearbeitbar sein?**
-- [X] Änderungen übernimmt Leitwerk Digital
+- [X] Änderungen übernimmt Leinaro
 - [ ] Kunde soll einfache Inhalte selbst ändern können
 - [ ] Noch zu klären
 
@@ -657,7 +657,7 @@ _World4You_
 _(Die Angaben müssen vom Kunden bereitgestellt und vor Veröffentlichung geprüft werden.)_
 
 **Vollständiger Firmenname:**
-_Leitwerk Digital_
+_Leinaro_
 
 **Rechtsform:**
 _Einzelunternehmen_
@@ -697,7 +697,7 @@ ________________________________________
 ## 24. Wartung und Pflege
 
 **Wer pflegt die Website nach der Fertigstellung?**
-- [X] Leitwerk Digital
+- [X] Leinaro
 - [ ] Kunde selbst
 - [ ] Wird noch entschieden
 

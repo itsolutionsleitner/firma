@@ -1,6 +1,6 @@
-# Leitwerk Digital
+# Leinaro
 
-Statische, responsive Unternehmenswebsite für Leitwerk Digital. Die Website benötigt keinen Build-Schritt und kann direkt mit der VS-Code-Erweiterung **Live Server** geöffnet werden.
+Statische, responsive Unternehmenswebsite für Leinaro. Die Website benötigt keinen Build-Schritt und kann direkt mit der VS-Code-Erweiterung **Live Server** geöffnet werden.
 
 ## Struktur
 
@@ -13,6 +13,11 @@ Statische, responsive Unternehmenswebsite für Leitwerk Digital. Die Website ben
 - `images/` – hier kommen Logo, Portrait, Projektfotos und das optionale Hero-Video hinein
 
 ## Aktuelles Designsystem
+
+Die Wortmarke liegt als `images/leinaro-logo.svg` vor und wird in Navigation,
+Footer und als Favicon verwendet. Sie stammt aus der gelieferten SVG-Datei;
+lediglich die Zeichenfläche wurde auf das Logo zugeschnitten. Formen und Farben
+sind unverändert. Alte Logo-Dateien bleiben zur Wiederherstellung erhalten.
 
 Der zentrierte Startseiten-Hero ist die visuelle Grundlage für alle Seitentypen:
 helle Cremeflächen, Primärfarbe `#D3EE55`, burgunderrote Serifenschrift-Akzente,

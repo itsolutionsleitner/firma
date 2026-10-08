@@ -223,7 +223,7 @@ p {
 }
 .brand {
   align-items: center;
-  background: url('../images/linaro-logo.png') center / contain no-repeat;
+  background: url('../images/leinaro-logo.svg') center / contain no-repeat;
   display: inline-flex;
   flex: 0 0 auto;
   height: 3.15rem;
@@ -1134,7 +1134,7 @@ p {
   padding-bottom: 3rem;
 }
 .footer-brand {
-  background-image: url('../images/linaro-logo-light.png');
+  background-image: url('../images/leinaro-logo.svg');
   height: 4.75rem;
   width: min(14rem, 100%);
 }
@@ -1238,7 +1238,7 @@ select:focus-visible {
   border-color: rgba(255, 255, 255, 0.13);
 }
 .site-header--dark .brand {
-  background-image: url('../images/linaro-logo-light.png');
+  background-image: url('../images/leinaro-logo.svg');
 }
 .site-header--dark .nav-links a,
 .site-header--dark .nav-links button {
@@ -1641,7 +1641,7 @@ select:focus-visible {
   padding-top: 0.35rem;
 }
 .statement-stage__ribbon {
-  background: var(--aqua);
+  background: var(--lime);
   color: var(--ink-deep);
   margin-top: 1rem;
   overflow: hidden;
@@ -3856,8 +3856,11 @@ h4,
   transform: rotate(-1deg) scale(1.02);
 }
 .statement-stage__ribbon-track {
-  animation: ribbon-scroll 28s linear infinite;
+  animation: ribbon-scroll 38s linear infinite;
+  backface-visibility: hidden;
   display: flex;
+  gap: 0;
+  transform: translate3d(0, 0, 0);
   width: max-content;
   will-change: transform;
 }
@@ -3871,6 +3874,9 @@ h4,
   padding-right: 1.4rem;
 }
 @keyframes ribbon-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
   to {
     transform: translate3d(-50%, 0, 0);
   }
@@ -4290,10 +4296,10 @@ a.contact-method:hover small {
 /* Mehr Inhalt pro Hälfte verhindert auf breiten Monitoren eine sichtbare Lücke
    im endlosen Laufband. */
 .statement-stage__ribbon-track span {
-  min-width: max-content;
+  min-width: 100vw;
 }
 
-/* Hauptleistungen in der etablierten Leitwerk-Akzentfarbe. */
+/* Hauptleistungen in der etablierten Leinaro-Akzentfarbe. */
 .cinema-card h3 {
   color: var(--lime);
 }
@@ -5034,7 +5040,7 @@ body:has(> .site-header:not(.site-header--dark)) {
   }
 }
 .site-header--dark .brand {
-  background-image: url('../images/linaro-logo.png');
+  background-image: url('../images/leinaro-logo.svg');
 }
 .site-header--dark .nav-links a,
 .site-header--dark .nav-links button {
@@ -5394,7 +5400,7 @@ body:has(> .site-header:not(.site-header--dark)) {
 }
 .footer-brand,
 .site-footer--premium .footer-brand {
-  background-image: url('../images/linaro-logo.png');
+  background-image: url('../images/leinaro-logo.svg');
 }
 .footer-title,
 .footer-premium__top > div:nth-child(2) p {
@@ -6181,7 +6187,7 @@ body:has(.legal) .page-hero::before { background-image: none; }
 .image-narrative__image p { background: rgba(16, 30, 34, 0.75); padding: 0.8rem; }
 .statement-stage::before { display: none; }
 .statement-stage__ribbon {
-  background: var(--aqua);
+  background: #D3EE55;
   border-bottom: 1px solid var(--editorial-line);
   border-top: 1px solid var(--editorial-line);
   color: var(--ink-deep);
@@ -7149,6 +7155,40 @@ body.cookie-note-open { overflow: hidden; }
   .cookie-banner .cookie-banner__actions { align-items: stretch; flex-direction: column; gap: 1.3rem; }
   .cookie-banner .button { justify-content: space-between; width: 100%; }
   .cookie-banner a { align-self: center; padding: 0.5rem; }
+}
+
+/* Unterseiten-Heros: nur Seitentitel und kurze Rubrik, wie auf der Startseite. */
+.page-hero.page-hero {
+  padding: clamp(4.5rem, 7vw, 7rem) 0 clamp(4rem, 6vw, 6rem);
+}
+.page-hero.page-hero > .container { max-width: 1220px; }
+.page-hero.page-hero .eyebrow {
+  font-size: clamp(0.75rem, 1.05vw, 0.95rem);
+  margin-bottom: clamp(1.6rem, 3vw, 2.6rem);
+}
+.page-hero.page-hero h1 {
+  font-size: clamp(3.2rem, 7.1vw, 7.5rem);
+  font-weight: 900;
+  letter-spacing: -0.065em;
+  line-height: 1.03;
+  max-width: 20ch;
+  text-wrap: balance;
+}
+.page-hero.page-hero h1 .lime { line-height: 1.08; }
+@media (max-width: 850px) {
+  .page-hero.page-hero { padding: 3.5rem 0 4rem; }
+  .page-hero.page-hero h1 {
+    font-size: clamp(2.1rem, 9.4vw, 4.75rem);
+    letter-spacing: -0.055em;
+    line-height: 1.08;
+    max-width: 100%;
+  }
+  .page-hero.page-hero h1 .lime {
+    font-size: min(1.02em, 8.7vw);
+    margin-top: 0.2em;
+    padding-inline: 0.1em;
+  }
+  .page-hero.page-hero .eyebrow { font-size: 0.7rem; margin-bottom: 2rem; }
 }
 
 /* Abschnittsflächen: vorhandene Markenfarben mit klar erkennbaren Wechseln. */
